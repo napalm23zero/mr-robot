@@ -191,7 +191,7 @@ def stop_script():
 
 def process_files():
     """
-    Finds all .java files in the folder, picks ONE at random, and types it.
+    Finds all files in the folder, picks ONE at random, and types it.
     We'll also occasionally pause to do a figure-eight mouse move for ~30s.
     """
     log(f"🔍 Searching for files in: {FOLDER_PATH}")
@@ -243,7 +243,7 @@ def main():
     Launches the unstoppable loop:
       1. Waits START_DELAY seconds
       2. Clears stop_event
-      3. Picks one .java file at random and types it
+      3. Picks one file at random and types it
       4. Waits INACTIVITY_RESTART_TIME seconds
       5. Repeats forever (or until 'Esc' ends the party)
     """
@@ -256,7 +256,7 @@ def main():
 
         stop_event.clear()
 
-        # Process exactly ONE .java file
+        # Process exactly ONE file
         try:
             process_files()
         except Exception as e:
