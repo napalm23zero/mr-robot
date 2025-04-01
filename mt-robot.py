@@ -5,7 +5,7 @@ import os
 import threading
 import math
 from datetime import datetime
-import keyboard  # Because who needs a mouse, right?
+import keyboard  # only newbies uses a mouse
 
 # ──────────────────────────────────────────────────────────────────────────────
 #   _  _        _ __        _         ___  ____                    
@@ -14,7 +14,11 @@ import keyboard  # Because who needs a mouse, right?
 #  |_|\_|\__/_||_|   \__/_||_||_|_|_|/___||___/ /__|\___||_|  \___/
 #
 #  Made by: napalm23zero
-#  Modified: picks a single random file each round
+#  Take a look at my playground: https://github.com/napalm23zero
+#  Take a look at my other avater in a corporate work http://linkedin.com/in/dantas-rodrigo
+#  Wanna talk? email me, like people used to to un the 90's rodrigo.dantas@hustletech.dev
+#
+# Who's the boss? -> Rodrigo Dantas
 #
 #  INSTALL FIRST:
 #     - pip install pyautogui
@@ -24,11 +28,11 @@ import keyboard  # Because who needs a mouse, right?
 # ───────────────────────────
 #  YOU CONFIGURE, WE OBEY
 # ───────────────────────────
-DETECTION_THRESHOLD = 20           # If you move the mouse too fast, we'll know
-INACTIVITY_RESTART_TIME = 20       # Time (seconds) to chill before repeating
-FOLDER_PATH = r"C:\Users\Rodrigo Dantas\Desktop\java"  # Where your .java files live
-FILE_EXTENSION = r".java"          # We only mess with these
-START_DELAY = 10                   # Seconds before the 1st wave of destruction
+DETECTION_THRESHOLD = 20                   # If you move the mouse too fast, we'll know
+INACTIVITY_RESTART_TIME = 20               # Time (seconds) to chill before repeating
+FOLDER_PATH = r"C:\Users\DarthVader\files" # Where your fake files live
+FILE_EXTENSION = r".java"                  # We only mess with these
+START_DELAY = 10                           # Seconds before the 1st wave of destruction
 
 # Mouse movement config
 MOUSE_MOVE_DURATION_MIN = 1
@@ -45,10 +49,10 @@ TYPO_PROBABILITY = 0.03            # 3% chance of messing up
 TYPO_CHARACTERS = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()-_=+[]{};:,<.>/?\\|"
 
 # Chance to pause typing after each file and do a figure-eight
-INFINITY_MOVE_PROBABILITY = 0.3    # 30% chance
-INFINITY_MOVE_DURATION = 30        # 30 seconds
-INFINITY_MOVE_LOOPS = 2           # Number of 'figure-8' loops during that duration
-INFINITY_MOVE_RADIUS = 300        # Size of the loops
+INFINITY_MOVE_PROBABILITY = 0.3           # 30% chance
+INFINITY_MOVE_DURATION = 30               # 30 seconds
+INFINITY_MOVE_LOOPS = 2                   # Number of 'figure-8' loops during that duration
+INFINITY_MOVE_RADIUS = 300                # Size of the loops
 
 stop_event = threading.Event()
 screen_width, screen_height = pyautogui.size()
